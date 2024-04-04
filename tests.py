@@ -60,6 +60,15 @@ class Tests(unittest.TestCase):
     def test_is_board_full_false(self):
         game = TicTacToe()
         self.assertFalse(game.is_board_full())
+
+    def test_is_board_full_true(self):
+        game = TicTacToe()
+        game.board = [
+            ['X', 'O', 'X'],
+            ['X', 'O', 'O'],
+            ['O', 'X', 'X']
+        ]
+        self.assertTrue(game.is_board_full())
     
 if __name__ == '__main__':
     unittest.main()
