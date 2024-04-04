@@ -43,7 +43,7 @@ class Tests(unittest.TestCase):
         game = TicTacToe()
         game.board = [
             ['X', ' ', ' '],
-            ['X', ' ', ' '],
+            ['', 'X', ' '],
             [' ', ' ', 'X']
         ]
         self.assertEqual(game.check_winner(), 'X')
