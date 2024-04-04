@@ -38,6 +38,15 @@ class Tests(unittest.TestCase):
             ['X', ' ', ' ']
         ]
         self.assertEqual(game.check_winner(), 'X')
+    
+    def test_check_winner_diagonal(self):
+        game = TicTacToe()
+        game.board = [
+            ['X', ' ', ' '],
+            ['X', ' ', ' '],
+            [' ', ' ', 'X']
+        ]
+        self.assertEqual(game.check_winner(), 'X')
 
 if __name__ == '__main__':
     unittest.main()
