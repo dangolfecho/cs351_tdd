@@ -47,6 +47,15 @@ class Tests(unittest.TestCase):
             [' ', ' ', 'X']
         ]
         self.assertEqual(game.check_winner(), 'X')
+    
+    def test_check_no_winner(self):
+        game = TicTacToe()
+        game.board = [
+            ['X', 'O', 'X'],
+            ['X', 'O', 'O'],
+            ['O', 'X', 'X']
+        ]
+        self.assertIsNone(game.check_winner())
 
 if __name__ == '__main__':
     unittest.main()
