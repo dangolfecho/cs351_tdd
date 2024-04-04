@@ -41,3 +41,4 @@ class TicTacToe:
             for cell in row:
                 if cell == ' ':
                     return False
+        return True
