@@ -35,3 +35,9 @@ class TicTacToe:
         elif self.board[0][2] == self.board[1][1] == self.board[2][2] != ' ':
             return self.board[0][2]
         return None
+
+    def is_board_full(self):
+        for row in self.board:
+            for cell in row:
+                if cell == ' ':
+                    return False
