@@ -15,6 +15,11 @@ class Tests(unittest.TestCase):
         game = TicTacToe()
         self.assertTrue(game.make_move(0, 0))
         self.assertEqual(game.board[0][0], 'X')
-
+        
+    def test_make_move_invalid(self):
+        game = TicTacToe()
+        game.make_move(0, 0)
+        self.assertFalse(game.make_move(0, 0))  # Trying to make a move on an already occupied cell
+        
 if __name__ == '__main__':
     unittest.main()
