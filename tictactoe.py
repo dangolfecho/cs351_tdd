@@ -42,3 +42,26 @@ class TicTacToe:
                 if cell == ' ':
                     return False
         return True
+
+def play_game():
+    game = TicTacToe()
+    while True:
+        game.print_board()
+        row = int(input("Enter row (0, 1, or 2): "))
+        col = int(input("Enter column (0, 1, or 2): "))
+        if game.make_move(row, col):
+            winner = game.check_winner()
+            if winner:
+                game.print_board()
+                print(f"Player {winner} wins!")
+                break
+            elif game.is_board_full():
+                game.print_board()
+                print("It's a tie!")
+                break
+        else:
+            print("Invalid move! Try again.")
+
+
+if __name__ == "__main__":
+    play_game()
