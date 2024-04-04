@@ -23,3 +23,11 @@ class TicTacToe:
         else:
             return False
 
+    def check_winner(self):
+        for row in range(3):
+            if self.board[row][0] == self.board[row][1] == self.board[row][2] != ' ':
+                return self.board[row][0]
+        for col in range(3):
+            if self.board[0][col] == self.board[1][col] == self.board[2][col] != ' ':
+                return self.board[0][col]
+
