@@ -13,6 +13,8 @@ class TicTacToe:
             print('-' * 5)
 
     def make_move(self, row, col):
+        if (row not in [0, 1, 2] or col not in [0, 1, 2]):
+            return False
         if self.board[row][col] == ' ':
             self.board[row][col] = self.current_player
             if self.current_player == 'X':
